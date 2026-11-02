@@ -1,0 +1,18 @@
+:root{--bg:#0a0c12;--card:#141824;--ink:#f0ebe3;--mute:#9aa3b5;--acc:#c9a96e;--glow:rgba(201,169,110,.28)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#1a2030 0%,var(--bg) 55%) fixed;color:var(--ink);font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif}
+header{text-align:center;padding:4.5rem 1.2rem 2.2rem}h1{font-size:clamp(2rem,6vw,3.4rem);letter-spacing:.35em;margin:.35em 0;font-weight:400;text-shadow:0 0 36px var(--glow)}
+.sub{letter-spacing:.28em;color:var(--mute);font-size:.78rem;margin:0}.lead{color:var(--mute);max-width:36em;margin:.6rem auto 0;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.6rem;max-width:1280px;margin:0 auto;padding:1rem 1.4rem 4rem}
+.card{all:unset;cursor:pointer;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.4);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;border:1px solid rgba(201,169,110,.12)}
+.card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.55),0 0 0 1px var(--acc)}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;display:block;background:#000}
+.meta{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.35rem}
+.t{font-size:1.05rem;letter-spacing:.06em}.a{color:var(--acc);font-size:.85rem;letter-spacing:.12em}
+dialog{border:0;padding:0;background:#10141e;color:var(--ink);border-radius:16px;max-width:min(1200px,96vw);max-height:96vh;overflow:auto;position:relative}
+dialog::backdrop{background:rgba(4,6,10,.88);backdrop-filter:blur(5px)}
+dialog img{width:100%;max-height:78vh;object-fit:contain;background:#05070b;display:block}
+.d{padding:1.2rem 1.5rem 0}.d h2{margin:0 0 .3rem;font-weight:400;letter-spacing:.08em}.d p{line-height:1.9;margin:.4rem 0}
+.x{position:absolute;right:.7rem;top:.35rem;font-size:1.9rem;z-index:2}dialog button{background:none;border:0;color:var(--ink);cursor:pointer}
+dialog nav{display:flex;justify-content:space-between;padding:.4rem 1rem 1.1rem}dialog nav button{font-size:2rem;padding:.2rem .8rem}
+footer{text-align:center;color:var(--mute);padding:2rem;font-size:.78rem;letter-spacing:.22em}
+@media (max-width:640px){.grid{grid-template-columns:1fr;padding:1rem}.card img{aspect-ratio:16/10}}
